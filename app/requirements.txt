@@ -1,0 +1,7 @@
+# 私人厨师前端新增依赖（在 edu 环境执行安装）
+# 注意：langchain / langchain-openai / langchain-tavily 等已在环境中，无需重复安装
+fastapi
+uvicorn
+oss2
+python-multipart
+markdown

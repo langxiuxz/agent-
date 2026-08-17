@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>私人厨师</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="logo">👨‍🍳 私人厨师</span>
+        <button id="new-session-btn" class="new-btn" title="新建对话">＋ 新对话</button>
+      </div>
+      <ul id="session-list" class="session-list"></ul>
+    </aside>
+
+    <main class="chat">
+      <header class="chat-header">
+        <span id="chat-title">新对话</span>
+        <button id="clear-btn" class="clear-btn" title="清空当前对话">🗑 清空对话</button>
+      </header>
+      <div id="messages" class="messages"></div>
+
+      <div class="input-area">
+        <div id="image-preview" class="image-preview hidden">
+          <img id="preview-img" alt="图片预览">
+          <button id="remove-image" class="remove-img" title="移除图片">×</button>
+        </div>
+        <div class="input-row">
+          <button id="upload-btn" class="upload-btn" title="上传食材图片">🖼️</button>
+          <textarea id="input" rows="1" placeholder="描述你的食材，或上传图片让我识别…（Enter 发送，Shift+Enter 换行）"></textarea>
+          <button id="send-btn" class="send-btn">发送</button>
+        </div>
+        <input type="file" id="file-input" accept="image/*" hidden>
+      </div>
+    </main>
+  </div>
+
+  <script src="/static/marked.min.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
